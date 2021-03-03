@@ -7,11 +7,13 @@ class WasRun(TestCase):
         TestCase.__init__(self, name)
 
     def setUp(self):
-        self.was_run = None
-        self.was_set_up = 1
         self.log = "setUp "
 
     def testMethod(self):
-        self.was_run = 1
         self.log = self.log + "testMethod "
+
+    def tearDown(self):
+        self.log = self.log + "tearDown"
+    
+
 
