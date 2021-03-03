@@ -12,7 +12,4 @@ class TestCaseTest(TestCase):
 
     def testSetUp(self):
         self.test.run()
-        assert(self.test.was_set_up)
-
-TestCaseTest("testRunning").run()
-TestCaseTest("testSetUp").run()
+        assert("setUp testMethod" == self.test.log)

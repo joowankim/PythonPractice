@@ -9,7 +9,9 @@ class WasRun(TestCase):
     def setUp(self):
         self.was_run = None
         self.was_set_up = 1
+        self.log = "setUp "
 
     def testMethod(self):
         self.was_run = 1
+        self.log = self.log + "testMethod "
 
